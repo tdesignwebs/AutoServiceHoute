@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoServiceHoute</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .section {
+      width: 100%;
+      height: 100vh;
+      scroll-snap-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    .section:nth-child(1) { background: #30302E; }
+    .section:nth-child(2) { background: #5B5952; }
+    .section:nth-child(3) { background: #404040; }
+    .section:nth-child(4) { background: #666666; }
+    .section:nth-child(5) { background: #999999; }
+
+    /* Navbar styling (optional fix) */
+    .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            width: 95%;
+            height: 100px;
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-items{
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+        h1{
+            font-family: sans-serif;
+            color: white;
+            margin: 0;
+            font-size: 17px;
+            font-weight: 300;
+        }
+        h2{
+            font-family: sans-serif;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            margin: 0;
+            font-weight: 600;
+        }
+        .book-button{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.167);
+            border-radius: 500px;
+        }
+        .book-box{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 100px;
+            height: fit-content;
+        }
+  </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+          
+        </div>
+        <div class="nav-items">
+            <div class="item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 17C14.2005 17.6224 13.1502 18 12 18C10.8497 18 9.79953 17.6224 9 17" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M2.35139 13.2135C1.99837 10.9162 1.82186 9.76763 2.25617 8.74938C2.69047 7.73112 3.65403 7.03443 5.58114 5.64106L7.02099 4.6C9.41829 2.86667 10.6169 2 12 2C13.383 2 14.5817 2.86667 16.979 4.6L18.4188 5.64106C20.346 7.03443 21.3095 7.73112 21.7438 8.74938C22.1781 9.76763 22.0016 10.9162 21.6486 13.2135L21.3476 15.1724C20.8471 18.4289 20.5969 20.0572 19.429 21.0286C18.2611 22 16.5536 22 13.1388 22H10.8612C7.44634 22 5.73891 22 4.571 21.0286C3.40309 20.0572 3.15287 18.4289 2.65243 15.1724L2.35139 13.2135Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <h1>Home</h1>                        
+            </div>
+            <div class="item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.98633 3.7002C9.78335 6.79476 14.3961 0.115905 17.1255 2.53974C18.696 3.93439 18.1995 7.01373 16.1607 9.01999" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M13.7897 13.9839C13.8075 13.6494 13.9014 13.0373 13.3927 12.5722M13.3927 12.5722C13.2353 12.4282 13.0201 12.2983 12.7272 12.1951C11.6788 11.8256 10.391 13.0623 11.302 14.1944C11.7917 14.803 12.1692 14.9901 12.1337 15.6812C12.1087 16.1673 11.6311 16.6752 11.0018 16.8686C10.4551 17.0367 9.85198 16.8142 9.47052 16.3879C9.00476 15.8675 9.0518 15.3769 9.04782 15.163M13.3927 12.5722L13.9668 11.998M9.51204 16.4528L8.9668 16.998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.2726 6.63305C19.1981 6.8108 19.4057 7.39525 19.682 9.01703C19.9309 10.4776 20.0007 12.2304 20.0007 12.9765C19.9753 13.2515 19.8625 13.5081 19.682 13.7174C17.7469 15.7455 13.9064 19.5753 11.9681 21.4778C11.2074 22.1569 10.0597 22.1716 9.25241 21.5482C7.59928 20.0612 6.01095 18.3803 4.45501 16.8625C3.82993 16.0574 3.84458 14.9129 4.52567 14.1544C6.57621 12.0272 10.2867 8.38602 12.3813 6.3745C12.5913 6.19455 12.8486 6.08199 13.1243 6.05672C13.5943 6.0566 14.4005 6.11977 15.1859 6.1653" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <h1>Pricing</h1>                        
+            </div>
+            <div class="item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.75 11V10C19.75 6.22876 19.75 4.34315 18.5784 3.17157C17.4068 2 15.5212 2 11.75 2H10.7501C6.97883 2 5.09322 2 3.92165 3.17156C2.75008 4.34312 2.75006 6.22872 2.75003 9.99993L2.75 14C2.74996 17.7712 2.74995 19.6568 3.92148 20.8284C5.09305 21.9999 6.97873 22 10.75 22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.25 7H15.25M7.25 12H15.25" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M13.25 20.8268V22H14.4234C14.8328 22 15.0375 22 15.2215 21.9238C15.4056 21.8475 15.5503 21.7028 15.8398 21.4134L20.6634 16.5894C20.9364 16.3164 21.0729 16.1799 21.1459 16.0327C21.2848 15.7525 21.2848 15.4236 21.1459 15.1434C21.0729 14.9961 20.9364 14.8596 20.6634 14.5866C20.3903 14.3136 20.2538 14.1771 20.1065 14.1041C19.8263 13.9653 19.4973 13.9653 19.2171 14.1041C19.0699 14.1771 18.9333 14.3136 18.6603 14.5866L13.8367 19.4106C13.5472 19.7 13.4025 19.8447 13.3263 20.0287C13.25 20.2128 13.25 20.4174 13.25 20.8268Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <h1>Blog</h1>                        
+            </div>
+            <div class="item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 7H16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 11H12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 21.5V21C13 18.1716 13 16.7574 13.8787 15.8787C14.7574 15 16.1716 15 19 15H19.5M20 13.3431V10C20 6.22876 20 4.34315 18.8284 3.17157C17.6569 2 15.7712 2 12 2C8.22877 2 6.34315 2 5.17157 3.17157C4 4.34314 4 6.22876 4 10V14.5442C4 17.7892 4 19.4117 4.88607 20.5107C5.06508 20.7327 5.26731 20.9349 5.48933 21.1139C6.58831 22 8.21082 22 11.4558 22C12.1614 22 12.5141 22 12.8372 21.886C12.9044 21.8623 12.9702 21.835 13.0345 21.8043C13.3436 21.6564 13.593 21.407 14.0919 20.9081L18.8284 16.1716C19.4065 15.5935 19.6955 15.3045 19.8478 14.9369C20 14.5694 20 14.1606 20 13.3431Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>        
+                    <h1>Pages</h1>                        
+            </div>
+        </div>
+       <div class="book-box">
+        <div class="book-button">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 6L8.91302 9.91697C11.4616 11.361 12.5384 11.361 15.087 9.91697L22 6" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M2.01577 13.4756C2.08114 16.5412 2.11383 18.0739 3.24496 19.2094C4.37608 20.3448 5.95033 20.3843 9.09883 20.4634C11.0393 20.5122 12.9607 20.5122 14.9012 20.4634C18.0497 20.3843 19.6239 20.3448 20.7551 19.2094C21.8862 18.0739 21.9189 16.5412 21.9842 13.4756C22.0053 12.4899 22.0053 11.5101 21.9842 10.5244C21.9189 7.45886 21.8862 5.92609 20.7551 4.79066C19.6239 3.65523 18.0497 3.61568 14.9012 3.53657C12.9607 3.48781 11.0393 3.48781 9.09882 3.53656C5.95033 3.61566 4.37608 3.65521 3.24495 4.79065C2.11382 5.92608 2.08114 7.45885 2.01576 10.5244C1.99474 11.5101 1.99475 12.4899 2.01577 13.4756Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+                
+        </div>
+       </div>
+    </div>
+
+  <div class="container">
+    <section class="section">Section 1</section>
+    <section class="section">Section 2</section>
+    <section class="section">Section 3</section>
+    <section class="section">Section 4</section>
+    <section class="section">Section 5</section>
+  </div>
+</body>
+</html>
