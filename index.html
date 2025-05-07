@@ -31,6 +31,36 @@
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
             scroll-behavior: smooth;
+            z-index: 1;
+            position: relative;
+        }
+
+        .background-color-1 {
+            background-position: center;
+            background-size: contain;
+            margin-top: -200px;
+            z-index: 2;
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        .background-color-2 {
+            background-position: center;
+            background-size: contain;
+            margin-top: 1100px;
+            z-index: 2;
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        .background-color-3 {
+            background-position: center;
+            background-size: contain;
+            left: 800px;
+            z-index: 2;
+            position: absolute;
+            background-repeat: no-repeat;
+            width: 100%;
         }
 
         .section {
@@ -53,6 +83,7 @@
             justify-content: space-between;
             position: fixed;
             top: 0;
+            z-index: 100;
             width: 100%;
             height: 100px;
         }
@@ -132,7 +163,9 @@
 
         .main-box-info {
             width: 80%;
+            z-index: 3;
             height: 80vh;
+            max-width: 1100px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -202,7 +235,8 @@
             margin-top: 10px;
             transition: all ease-in 0.1s;
         }
-        .button-more:hover{
+
+        .button-more:hover {
             background-color: rgba(255, 255, 255, 1);
             color: black;
         }
@@ -213,6 +247,143 @@
             justify-content: center;
             width: 100%;
             height: 100vh;
+        }
+
+        .container-inside-box-footer-main {
+            display: flex;
+            align-items: center;
+            z-index: 4;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bottom-side {
+            width: 100%;
+            height: 10vh;
+            font-weight: lighter;
+            font-size: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .top-side {
+            width: 100%;
+            height: 10vh;
+            font-weight: lighter;
+            font-size: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .middle-side {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .left-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 100%;
+            gap: 7px;
+            flex-direction: column;
+        } 
+        .right-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 100%;
+            flex-direction: column;
+        }
+        .maps-box{
+            border-radius: 30px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tijden-box{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: fit-content;
+        }
+        .box-dag{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100px;
+        }
+        .box-rijd{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: fit-content;
+        }
+        .box-email-phone{
+            width: 80%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .email-box-top-side{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: 100%;
+            height: 40px;
+        }
+        .box-name-email{
+            width: 40%;
+            height: 40px;
+            display: flex;
+            font-size: 18px;
+            text-align: left;
+            font-weight: lighter;
+            align-items: center;
+            justify-content: start;
+            color: #C0C0C0;
+        }
+        .box-phone-email{
+            width: 40%;
+            height: 40px;
+            display: flex;
+            font-size: 18px;
+            text-align: left;
+            font-weight: lighter;
+            align-items: center;
+            justify-content: start;
+            color: #ffffff;
+        }
+        .tijden-main-box{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+        }
+        .welkom-text{
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .text-box-welcome{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-direction: column;
         }
     </style>
 </head>
@@ -237,22 +408,22 @@
             </div>
             <div class="nav-items">
                 <div class="item">
-                    
+
                     <h1>Banden</h1>
                 </div>
                 <div class="item">
-                  
+
                     <h1>APK</h1>
                 </div>
                 <div class="item">
-                  
+
                     <h1>Airco</h1>
                 </div>
                 <div class="item">
-                   
+
                     <h1>Onderhoud</h1>
                 </div>
-               
+
             </div>
             <div class="book-box">
                 <div class="book-button">
@@ -272,6 +443,13 @@
     <div class="container">
 
         <section class="section">
+          <div class="text-box-welcome">
+            <h1 class="welkom-text">Welkom bij AutoServiceHoute</h1>
+            <h1>Bij AutoServiceHoute staan we voor eerlijke service, vakkundig onderhoud en persoonlijke aandacht – voor elke auto en elke klant.</h1>
+          </div>
+        </section>
+
+        <section class="section">
             <div class="main-box-info">
                 <div class="item-box">
                     <div class="title">
@@ -289,7 +467,9 @@
                     <img src="./img/main-tire.png" alt="">
                 </div>
             </div>
+            <img class="background-color-1" src="./images/backgrounds/background-2.png">
         </section>
+
         <section class="section">
             <div class="main-box-info">
                 <div class="item-box">
@@ -324,6 +504,7 @@
                     <img src="./img/airco.png" alt="">
                 </div>
             </div>
+            <img class="background-color-3" src="./images/backgrounds/background-3.png">
         </section>
         <section class="section">
             <div class="main-box-info">
@@ -342,6 +523,57 @@
                     <img src="./img/onderhoud.png" alt="">
                 </div>
             </div>
+          
+        </section>
+        <section class="section">
+            <div class="container-inside-box-footer-main">
+                <div class="top-side">
+                    <div class="overlay-box"></div>
+                </div>
+                <div class="middle-side">
+                    <div class="left-side">
+                      <div class="tijden-main-box">
+                        <div class="tijden-box">
+                            <div class="box-dag"><h1>Maandag</h1></div>
+                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
+                        </div>
+                        <div class="tijden-box">
+                            <div class="box-dag"><h1>Dinsdag</h1></div>
+                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
+                        </div>
+                        <div class="tijden-box">
+                            <div class="box-dag"><h1>Woensdag</h1></div>
+                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
+                        </div>
+                        <div class="tijden-box">
+                            <div class="box-dag"><h1>Donderdag</h1></div>
+                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
+                        </div>
+                        <div class="tijden-box">
+                            <div class="box-dag"><h1>Vrijdag</h1></div>
+                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
+                        </div>
+                      </div>
+                        <div class="box-email-phone">
+                           <div class="email-box-top-side">
+                            <div class="box-name-email">Email</div>
+                            <div class="box-name-email">Phone Number</div>
+                           </div>
+                           <div class="email-box-top-side">
+                            <div class="box-phone-email">+31 6 24987172</div>
+                            <div class="box-phone-email">Mehmet.Babacanoglu@gmail.com</div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                     <div class="maps-box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.11505152654763!2d4.65242942849728!3d52.501199198246205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5f094c53ea973%3A0x2a89cc3e25de80b1!2sAmbachtsring%209-K%2C%201969%20NH%20Heemskerk!5e1!3m2!1snl!2snl!4v1746603681883!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                    </div>
+                </div>
+                <div class="bottom-side">© 2025 AutoServiceHoute </div>
+            </div>
+            <img class="background-color-2" src="./images/backgrounds/background-1.png">
         </section>
 
     </div>
