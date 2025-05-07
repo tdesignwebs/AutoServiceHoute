@@ -45,6 +45,7 @@
             background-repeat: no-repeat;
             width: 100%;
         }
+
         .background-color-2 {
             background-position: center;
             background-size: contain;
@@ -54,6 +55,7 @@
             background-repeat: no-repeat;
             width: 100%;
         }
+
         .background-color-3 {
             background-position: center;
             background-size: contain;
@@ -283,6 +285,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .middle-side {
             width: 100%;
             height: 80vh;
@@ -299,7 +302,8 @@
             height: 100%;
             gap: 7px;
             flex-direction: column;
-        } 
+        }
+
         .right-side {
             display: flex;
             align-items: center;
@@ -308,32 +312,37 @@
             height: 100%;
             flex-direction: column;
         }
-        .maps-box{
+
+        .maps-box {
             border-radius: 30px;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .tijden-box{
+
+        .tijden-box {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: fit-content;
         }
-        .box-dag{
+
+        .box-dag {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             width: 100px;
         }
-        .box-rijd{
+
+        .box-rijd {
             display: flex;
             align-items: center;
             justify-content: flex-start;
             width: fit-content;
         }
-        .box-email-phone{
+
+        .box-email-phone {
             width: 80%;
             height: 150px;
             display: flex;
@@ -341,14 +350,16 @@
             align-items: center;
             justify-content: center;
         }
-        .email-box-top-side{
+
+        .email-box-top-side {
             display: flex;
             align-items: center;
             justify-content: start;
             width: 100%;
             height: 40px;
         }
-        .box-name-email{
+
+        .box-name-email {
             width: 40%;
             height: 40px;
             display: flex;
@@ -359,7 +370,8 @@
             justify-content: start;
             color: #C0C0C0;
         }
-        .box-phone-email{
+
+        .box-phone-email {
             width: 40%;
             height: 40px;
             display: flex;
@@ -370,23 +382,86 @@
             justify-content: start;
             color: #ffffff;
         }
-        .tijden-main-box{
+
+        .tijden-main-box {
             display: flex;
             align-items: flex-start;
             flex-direction: column;
             justify-content: center;
             width: 80%;
         }
-        .welkom-text{
+
+        .welkom-text {
             font-size: 60px;
             font-weight: bold;
         }
-        .text-box-welcome{
+
+        .text-box-welcome {
             display: flex;
+            z-index: 40;
             align-items: center;
             justify-content: center;
             gap: 10px;
             flex-direction: column;
+        }
+
+        .arrow-down {
+            position: absolute;
+            bottom: 20px;
+            font-size: 2.5rem;
+            color: #fff;
+            z-index: 10;
+            cursor: pointer;
+            animation: bounce 3s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+        .button-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.08);
+            border-radius: 100px;
+            color: white;
+            font-size: 15px;
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(50px);
+            z-index: 3;
+            transition: all ease-in 0.2s;
+            margin-top: 20px;
+        }
+        button:hover{
+            background-color: rgba(255, 255, 255, 0.200);
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -443,16 +518,33 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="main-container">
 
         <section class="section">
-          <div class="text-box-welcome">
-            <h1 class="welkom-text">Welkom bij AutoServiceHoute</h1>
-            <h1>Bij AutoServiceHoute staan we voor eerlijke service, vakkundig onderhoud en persoonlijke aandacht – voor elke auto en elke klant.</h1>
-          </div>
+            <div class="text-box-welcome">
+                <h1 class="welkom-text">AutoServiceHoute</h1>
+                <h1>Bij AutoServiceHoute staan we voor eerlijke service, vakkundig onderhoud en persoonlijke aandacht –
+                    voor elke auto en elke klant.</h1>
+                <div class="button-box">
+                    <button><a href="https://wa.me/0624987172" target="_blank">WhatsApp</a>
+                    </button>
+                    <button><a href="mailto:mehmet.babacanoglu@gmail.com">Email</a>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="arrow-down" onclick="smoothScrollToSection()"><svg width="40" height="40" viewBox="0 0 24 24"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 20V4" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M17 15C17 15 13.3175 20 11.9999 20C10.6823 20 7 15 7 15" stroke="white" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="next-section">
             <div class="main-box-info">
                 <div class="item-box">
                     <div class="title">
@@ -526,7 +618,7 @@
                     <img src="./img/onderhoud.png" alt="">
                 </div>
             </div>
-          
+
         </section>
         <section class="section">
             <div class="container-inside-box-footer-main">
@@ -535,43 +627,66 @@
                 </div>
                 <div class="middle-side">
                     <div class="left-side">
-                      <div class="tijden-main-box">
-                        <div class="tijden-box">
-                            <div class="box-dag"><h1>Maandag</h1></div>
-                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
+                        <div class="tijden-main-box">
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Maandag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Dinsdag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Woensdag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Donderdag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Vrijdag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
                         </div>
-                        <div class="tijden-box">
-                            <div class="box-dag"><h1>Dinsdag</h1></div>
-                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
-                        </div>
-                        <div class="tijden-box">
-                            <div class="box-dag"><h1>Woensdag</h1></div>
-                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
-                        </div>
-                        <div class="tijden-box">
-                            <div class="box-dag"><h1>Donderdag</h1></div>
-                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
-                        </div>
-                        <div class="tijden-box">
-                            <div class="box-dag"><h1>Vrijdag</h1></div>
-                            <div class="box-rijd"><h1>09:00 - 18:00</h1></div>
-                        </div>
-                      </div>
                         <div class="box-email-phone">
-                           <div class="email-box-top-side">
-                            <div class="box-name-email">Email</div>
-                            <div class="box-name-email">Phone Number</div>
-                           </div>
-                           <div class="email-box-top-side">
-                            <div class="box-phone-email">+31 6 24987172</div>
-                            <div class="box-phone-email">Mehmet.Babacanoglu@gmail.com</div>
-                           </div>
+                            <div class="email-box-top-side">
+                                <div class="box-name-email">Email</div>
+                                <div class="box-name-email">Phone Number</div>
+                            </div>
+                            <div class="email-box-top-side">
+                                <div class="box-phone-email">+31 6 24987172</div>
+                                <div class="box-phone-email">Mehmet.Babacanoglu@gmail.com</div>
+                            </div>
                         </div>
                     </div>
                     <div class="right-side">
-                     <div class="maps-box">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.11505152654763!2d4.65242942849728!3d52.501199198246205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5f094c53ea973%3A0x2a89cc3e25de80b1!2sAmbachtsring%209-K%2C%201969%20NH%20Heemskerk!5e1!3m2!1snl!2snl!4v1746603681883!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                     </div>
+                        <div class="maps-box">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.11505152654763!2d4.65242942849728!3d52.501199198246205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5f094c53ea973%3A0x2a89cc3e25de80b1!2sAmbachtsring%209-K%2C%201969%20NH%20Heemskerk!5e1!3m2!1snl!2snl!4v1746603681883!5m2!1snl!2snl"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="bottom-side">© 2025 AutoServiceHoute </div>
@@ -581,5 +696,35 @@
 
     </div>
 </body>
+<script>
+    function smoothScrollToSection() {
+        const container = document.getElementById('main-container');
+        const target = document.getElementById('next-section');
+
+        const targetPosition = target.offsetTop;
+        const startPosition = container.scrollTop;
+        const distance = targetPosition - startPosition;
+        const duration = 1000; // scroll duration in ms
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+            container.scrollTop = run;
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+</script>
+
 
 </html>
