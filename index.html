@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoServiceHoute</title>
     <style>
+        :root {
+            --vh: 1vh;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -15,19 +19,20 @@
 
         html,
         body {
-            height: 100vh;
+            height: 100%;
+            min-height: -webkit-fill-available;
             background-color: #000319;
             overflow: hidden;
         }
 
         body {
             scroll-behavior: smooth;
-
         }
 
         .container {
             width: 100%;
             height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
             overflow-y: scroll;
             overflow-x: hidden;
             scroll-snap-type: y mandatory;
@@ -69,6 +74,7 @@
         .section {
             width: 100%;
             height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
             scroll-snap-align: center;
             display: flex;
             align-items: center;
@@ -76,8 +82,8 @@
             font-size: 3rem;
             font-family: sans-serif;
             color: white;
+            position: relative;
         }
-
 
         /* Navbar styling (optional fix) */
         .navbar {
@@ -174,6 +180,7 @@
             width: 80%;
             z-index: 3;
             height: 80vh;
+            height: calc(var(--vh, 1vh) * 80);
             max-width: 1100px;
             display: flex;
             align-items: center;
@@ -184,10 +191,10 @@
             width: 300px;
             margin-right: 50px;
             height: 80vh;
+            height: calc(var(--vh, 1vh) * 80);
             display: flex;
             align-items: center;
             justify-content: center;
-
         }
 
         .img-product img {
@@ -198,6 +205,7 @@
         .item-box {
             width: 400px;
             height: 80vh;
+            height: calc(var(--vh, 1vh) * 80);
             gap: 10px;
             display: flex;
             align-items: flex-start;
@@ -219,7 +227,6 @@
             font-weight: bolder;
             text-align: left;
             font-size: 60px;
-
         }
 
         .text-h2 {
@@ -243,6 +250,8 @@
             font-weight: lighter;
             margin-top: 10px;
             transition: all ease-in 0.1s;
+            color: white;
+            background: transparent;
         }
 
         .button-more:hover {
@@ -256,6 +265,7 @@
             justify-content: center;
             width: 100%;
             height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
         }
 
         .container-inside-box-footer-main {
@@ -266,14 +276,15 @@
             flex-direction: column;
             width: 100%;
             height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
         }
 
         .bottom-side {
             width: 100%;
             height: 10vh;
+            height: calc(var(--vh, 1vh) * 10);
             font-weight: lighter;
             font-size: 16px;
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -282,9 +293,9 @@
         .top-side {
             width: 100%;
             height: 10vh;
+            height: calc(var(--vh, 1vh) * 10);
             font-weight: lighter;
             font-size: 16px;
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -292,7 +303,8 @@
 
         .middle-side {
             width: 100%;
-            height: 85vh;
+            height: 80vh;
+            height: calc(var(--vh, 1vh) * 80);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -323,6 +335,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 90%;
+            height: 60vh;
+            height: calc(var(--vh, 1vh) * 60);
         }
 
         .tijden-box {
@@ -421,12 +436,10 @@
         }
 
         @keyframes bounce {
-
             0%,
             100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(10px);
             }
@@ -478,149 +491,232 @@
         }
     </style>
     <style>
-       
-
         /* 0px to 359px */
         @media screen and (max-width: 359px) {
-            .middle-side{
+            .middle-side {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 height: 85vh;
+                height: calc(var(--vh, 1vh) * 85);
             }
-            .left-side{
+            .left-side {
                 width: 100%;
+                height: auto;
             }
-            .right-side{
+            .right-side {
                 width: 100%;
+                height: auto;
             }
-            .maps-box{
+            .maps-box {
                 width: 85%;
-                height: 300px;
+                height: 40vh;
+                height: calc(var(--vh, 1vh) * 40);
             }
-            .bottom-side{
+            .bottom-side {
                 height: 5vh;
+                height: calc(var(--vh, 1vh) * 5);
             }
-             .tijden-main-box {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-        }
-         .nav-items{
-            display: none;
-        }
-        .book-box{
-            display: none;
-        }
-        .background-color-1{
-            width: 400%;
-        }
-        .background-color-2{
-            width: 400%;
-            margin-top: 1400px;
-        }
-        .background-color-3{
-            width: 400%;
-            left: 100px;
-        }
-        .welkom-text {
-font-size: 36px;
-font-weight: bold;
-text-align: center;
-width: 100%;
-}
-            /* Add more styles specific to this range */
+            .tijden-main-box {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+            }
+            .nav-items {
+                display: none;
+            }
+            .book-box {
+                display: none;
+            }
+            .background-color-1 {
+                width: 400%;
+            }
+            .background-color-2 {
+                width: 400%;
+                margin-top: 1400px;
+            }
+            .background-color-3 {
+                width: 400%;
+                left: 100px;
+            }
+            .welkom-text {
+                font-size: 36px;
+                font-weight: bold;
+                text-align: center;
+                width: 100%;
+            }
+            .main-box-info {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+            .img-product {
+                width: 100%;
+                margin-right: 0;
+                height: auto;
+            }
+            .img-product img {
+                width: 100%;
+            }
+            .item-box {
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+            .title-h1 {
+                font-size: 40px;
+            }
         }
 
         /* 360px to 439px */
         @media screen and (min-width: 360px) and (max-width: 439px) {
-             .middle-side{
+            .middle-side {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
                 height: 85vh;
+                height: calc(var(--vh, 1vh) * 85);
             }
             .welkom-text {
-font-size: 40px;
-font-weight: bold;
-text-align: center;
-width: 100%;
-}
-.title-h2 {
-text-align: center;
-width: 90%;
-font-size: 16px;
-height: fit-content;
-}
-            .left-side{
+                font-size: 40px;
+                font-weight: bold;
+                text-align: center;
                 width: 100%;
             }
-            .right-side{
-                width: 100%;
+            .title-h2 {
+                text-align: center;
+                width: 90%;
+                font-size: 16px;
+                height: fit-content;
             }
-            .maps-box{
+            .left-side {
+                width: 100%;
+                height: auto;
+            }
+            .right-side {
+                width: 100%;
+                height: auto;
+            }
+            .maps-box {
                 width: 85%;
-                height: 300px;
+                height: 40vh;
+                height: calc(var(--vh, 1vh) * 40);
             }
-            .bottom-side{
+            .bottom-side {
                 height: 5vh;
+                height: calc(var(--vh, 1vh) * 5);
             }
-             .tijden-main-box {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
+            .tijden-main-box {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+            }
+            .nav-items {
+                display: none;
+            }
+            .book-box {
+                display: none;
+            }
+            .background-color-1 {
+                width: 400%;
+            }
+            .background-color-2 {
+                width: 400%;
+                margin-top: 1400px;
+            }
+            .background-color-3 {
+                width: 400%;
+                left: 100px;
+            }
+            .main-box-info {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+            .img-product {
+                width: 100%;
+                margin-right: 0;
+                height: auto;
+            }
+            .img-product img {
+                width: 100%;
+            }
+            .item-box {
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+            .title-h1 {
+                font-size: 42px;
+            }
         }
-        .nav-items{
-            display: none;
-        }
-        .book-box{
-            display: none;
-        }
-  .background-color-1{
-            width: 400%;
-        }
-        .background-color-2{
-            width: 400%;
-            margin-top: 1400px;
-        }
-        .background-color-3{
-            width: 400%;
-            left: 100px;
-        }
-            /* Add more styles specific to this range */
-        }
-
 
         /* 440px to 686px */
         @media screen and (min-width: 440px) and (max-width: 686px) {
-            body {
-                /* background-color: #d4edda; */
-                /* Light green */
+            .main-box-info {
+                flex-direction: column;
+                height: auto;
+                padding: 30px;
             }
-
-            /* Add more styles specific to this range */
+            .img-product {
+                width: 100%;
+                margin-right: 0;
+                height: auto;
+            }
+            .img-product img {
+                width: 100%;
+                max-width: 400px;
+            }
+            .item-box {
+                width: 100%;
+                height: auto;
+                margin-bottom: 40px;
+            }
+            .title-h1 {
+                font-size: 48px;
+            }
+            .maps-box {
+                height: 50vh;
+                height: calc(var(--vh, 1vh) * 50);
+            }
         }
 
         /* 687px and up (optional, for larger devices) */
-        @media screen and (min-width: 687px) {
-            body {
-                /* background-color: #cce5ff; */
-                /* Light blue */
+        @media screen and (min-width: 687px) and (max-width: 1023px) {
+            .main-box-info {
+                flex-direction: column;
+                height: auto;
+                padding: 40px;
             }
-
-            /* Desktop styles or general layout */
+            .img-product {
+                width: 100%;
+                margin-right: 0;
+                height: auto;
+            }
+            .img-product img {
+                width: 100%;
+                max-width: 500px;
+            }
+            .item-box {
+                width: 100%;
+                height: auto;
+                margin-bottom: 50px;
+            }
+            .maps-box {
+                height: 60vh;
+                height: calc(var(--vh, 1vh) * 60);
+            }
         }
     </style>
 </head>
-
 <body>
-    <div class="navbar">
+   <div class="navbar">
         <div class="navbar-box">
             <div class="logo">
                 <svg width="104" height="64" viewBox="0 0 104 64" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -639,8 +735,8 @@ height: fit-content;
             </div>
             <div class="nav-items">
                 <div class="item">
-
                     <h1><a href="./html/banden.html">banden</a></h1>
+                    
                 </div>
                 <div class="item">
 
@@ -875,6 +971,16 @@ height: fit-content;
 
         requestAnimationFrame(animation);
     }
+
+
+
+    function setRealViewportHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('resize', setRealViewportHeight);
+setRealViewportHeight();
 </script>
 
 
