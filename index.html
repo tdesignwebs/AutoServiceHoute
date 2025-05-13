@@ -16,7 +16,7 @@
         html,
         body {
             height: 100%;
-            background: linear-gradient(35deg, #101018, #101018);
+            background-color: #000319;
             overflow: hidden;
         }
 
@@ -128,6 +128,10 @@
             align-items: center;
             justify-content: center;
             gap: 4px;
+        }
+
+        .item:hover {
+            cursor: pointer;
         }
 
         h1 {
@@ -344,7 +348,7 @@
 
         .box-email-phone {
             width: 80%;
-            height: 150px;
+            height: fit-content;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -388,7 +392,7 @@
             align-items: flex-start;
             flex-direction: column;
             justify-content: center;
-            width: 80%;
+            width: 100%;
         }
 
         .welkom-text {
@@ -402,6 +406,7 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
+            width: 100%;
             flex-direction: column;
         }
 
@@ -451,10 +456,12 @@
             transition: all ease-in 0.2s;
             margin-top: 20px;
         }
-        button:hover{
+
+        button:hover {
             background-color: rgba(255, 255, 255, 0.200);
         }
-        a{
+
+        a {
             color: white;
             text-decoration: none;
             width: 100%;
@@ -462,6 +469,110 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        .title-h2 {
+            text-align: center;
+            width: 90%;
+            height: fit-content;
+        }
+    </style>
+    <style>
+       
+
+        /* 0px to 359px */
+        @media screen and (max-width: 359px) {
+            .middle-side{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .left-side{
+                width: 100%;
+            }
+            .right-side{
+                width: 100%;
+            }
+            .maps-box{
+                width: 85%;
+                height: 300px;
+            }
+            .bottom-side{
+                height: 5vh;
+            }
+             .tijden-main-box {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+         .nav-items{
+            display: none;
+        }
+        .book-box{
+            display: none;
+        }
+            /* Add more styles specific to this range */
+        }
+
+        /* 360px to 439px */
+        @media screen and (min-width: 360px) and (max-width: 439px) {
+             .middle-side{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .left-side{
+                width: 100%;
+            }
+            .right-side{
+                width: 100%;
+            }
+            .maps-box{
+                width: 85%;
+                height: 300px;
+            }
+            .bottom-side{
+                height: 5vh;
+            }
+             .tijden-main-box {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        .nav-items{
+            display: none;
+        }
+        .book-box{
+            display: none;
+        }
+
+            /* Add more styles specific to this range */
+        }
+
+        /* 440px to 686px */
+        @media screen and (min-width: 440px) and (max-width: 686px) {
+            body {
+                /* background-color: #d4edda; */
+                /* Light green */
+            }
+
+            /* Add more styles specific to this range */
+        }
+
+        /* 687px and up (optional, for larger devices) */
+        @media screen and (min-width: 687px) {
+            body {
+                /* background-color: #cce5ff; */
+                /* Light blue */
+            }
+
+            /* Desktop styles or general layout */
         }
     </style>
 </head>
@@ -487,7 +598,7 @@
             <div class="nav-items">
                 <div class="item">
 
-                    <h1>Banden</h1>
+                    <h1><a href="./html/banden.html">banden</a></h1>
                 </div>
                 <div class="item">
 
@@ -519,12 +630,82 @@
     </div>
 
     <div class="container" id="main-container">
-
+ <section class="section">
+            <div class="container-inside-box-footer-main">
+                <div class="top-side">
+                    <div class="overlay-box"></div>
+                </div>
+                <div class="middle-side">
+                    <div class="left-side">
+                        <div class="tijden-main-box">
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Maandag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Dinsdag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Woensdag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Donderdag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                            <div class="tijden-box">
+                                <div class="box-dag">
+                                    <h1>Vrijdag</h1>
+                                </div>
+                                <div class="box-rijd">
+                                    <h1>09:00 - 18:00</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-email-phone">
+                             <div class="button-box">
+                    <button><a href="https://wa.me/0624987172" target="_blank">WhatsApp</a>
+                    </button>
+                    <button><a href="mailto:mehmet.babacanoglu@gmail.com">Email</a>
+                    </button>
+                </div>
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="maps-box">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.11505152654763!2d4.65242942849728!3d52.501199198246205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5f094c53ea973%3A0x2a89cc3e25de80b1!2sAmbachtsring%209-K%2C%201969%20NH%20Heemskerk!5e1!3m2!1snl!2snl!4v1746603681883!5m2!1snl!2snl"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-side">© 2025 AutoServiceHoute </div>
+            </div>
+            <img class="background-color-2" src="./images/backgrounds/background-1.png">
+        </section>
         <section class="section">
             <div class="text-box-welcome">
                 <h1 class="welkom-text">AutoServiceHoute</h1>
-                <h1>Bij AutoServiceHoute staan we voor eerlijke service, vakkundig onderhoud en persoonlijke aandacht –
-                    voor elke auto en elke klant.</h1>
+                <h1 class="title-h2">Bij AutoServiceHoute staan we voor eerlijke service, vakkundig onderhoud en
+                    persoonlijke aandacht voor elke auto en elke klant.</h1>
                 <div class="button-box">
                     <button><a href="https://wa.me/0624987172" target="_blank">WhatsApp</a>
                     </button>
@@ -620,79 +801,7 @@
             </div>
 
         </section>
-        <section class="section">
-            <div class="container-inside-box-footer-main">
-                <div class="top-side">
-                    <div class="overlay-box"></div>
-                </div>
-                <div class="middle-side">
-                    <div class="left-side">
-                        <div class="tijden-main-box">
-                            <div class="tijden-box">
-                                <div class="box-dag">
-                                    <h1>Maandag</h1>
-                                </div>
-                                <div class="box-rijd">
-                                    <h1>09:00 - 18:00</h1>
-                                </div>
-                            </div>
-                            <div class="tijden-box">
-                                <div class="box-dag">
-                                    <h1>Dinsdag</h1>
-                                </div>
-                                <div class="box-rijd">
-                                    <h1>09:00 - 18:00</h1>
-                                </div>
-                            </div>
-                            <div class="tijden-box">
-                                <div class="box-dag">
-                                    <h1>Woensdag</h1>
-                                </div>
-                                <div class="box-rijd">
-                                    <h1>09:00 - 18:00</h1>
-                                </div>
-                            </div>
-                            <div class="tijden-box">
-                                <div class="box-dag">
-                                    <h1>Donderdag</h1>
-                                </div>
-                                <div class="box-rijd">
-                                    <h1>09:00 - 18:00</h1>
-                                </div>
-                            </div>
-                            <div class="tijden-box">
-                                <div class="box-dag">
-                                    <h1>Vrijdag</h1>
-                                </div>
-                                <div class="box-rijd">
-                                    <h1>09:00 - 18:00</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-email-phone">
-                            <div class="email-box-top-side">
-                                <div class="box-name-email">Email</div>
-                                <div class="box-name-email">Phone Number</div>
-                            </div>
-                            <div class="email-box-top-side">
-                                <div class="box-phone-email">+31 6 24987172</div>
-                                <div class="box-phone-email">Mehmet.Babacanoglu@gmail.com</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right-side">
-                        <div class="maps-box">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.11505152654763!2d4.65242942849728!3d52.501199198246205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5f094c53ea973%3A0x2a89cc3e25de80b1!2sAmbachtsring%209-K%2C%201969%20NH%20Heemskerk!5e1!3m2!1snl!2snl!4v1746603681883!5m2!1snl!2snl"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom-side">© 2025 AutoServiceHoute </div>
-            </div>
-            <img class="background-color-2" src="./images/backgrounds/background-1.png">
-        </section>
+       
 
     </div>
 </body>
