@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoServiceHoute contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/text-area.css">
+    <link rel="stylesheet" href="css/contact-form.css">
+    <style>
+        body {
+            background-color: #0E0C0D;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            overflow-x: hidden;
+            padding-bottom: 37px;
+            flex-direction: column;
+            height: fit-content;
+            gap: 100px;
+            justify-content: start;
+
+        }
+
+        h1 {
+            font-family: "Montserrat", sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <style>
+        .custom-alert {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(203, 255, 204, 0.007);
+            color: #ffffff;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            backdrop-filter: blur(160px);
+            -webkit-backdrop-filter: blur(160px);
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 9999;
+            min-width: 280px;
+            max-width: 90vw;
+        }
+
+        .custom-alert.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .custom-alert button {
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #0E0C0D;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            margin-left: auto;
+        }
+
+        .custom-alert.success {
+            background-color: rgba(203, 255, 204, 0.148);
+            /* green tone */
+            color: #ffffff;
+            backdrop-filter: blur(60px);
+            -webkit-backdrop-filter: blur(60px);
+        }
+
+        .custom-alert.error {
+            background-color: #ff606034;
+            /* red */
+            color: #fff;
+            backdrop-filter: blur(60px);
+            -webkit-backdrop-filter: blur(60px);
+        }
+
+        #custom-alert-close {
+            color: black;
+            width: 50px;
+            height: 50px;
+            background-color: #f9fafb;
+            font-size: 30px;
+        }
+    </style>
+    <style>
+        .footer-main-container {
+            width: 95%;
+            height: 538px;
+            border-radius: 25px;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-top-side-container {
+            display: flex;
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .footer-left-side-container {
+            width: 45%;
+            background-color: rgba(102, 51, 153, 0);
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+        }
+
+        .footer-title {
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .footer-copyright-h1-text {
+            color: #535353;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        a {
+            color: #535353;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        .box-info {
+            display: flex;
+            align-items: start;
+            gap: 2px;
+            justify-content: start;
+            flex-direction: column;
+        }
+
+        .footer-middle-side-container {
+            width: 23%;
+            background-color: rgba(102, 51, 153, 0);
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .title {
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container-holder-stuff {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            gap: 20px;
+        }
+
+        .product-names {
+            color: #535353;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        .footer-items {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 3px;
+        }
+
+
+        .footer-right-side-container {
+            width: 23%;
+            background-color: rgba(102, 51, 153, 0);
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+        }
+
+
+        .footer-bottom-side-container {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid #2222222c;
+        }
+    </style>
+
+    <style>
+        .top-side-google {
+            width: 100%;
+            height: 150px;
+            background-color: rgba(255, 255, 255, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .google-title-h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .blue {
+            color: #3074F1;
+        }
+
+        .red {
+            color: #E73124;
+        }
+
+        .yellow {
+            color: #FCB002;
+        }
+
+        .green {
+            color: #249B41;
+        }
+
+        .reviews-text {
+            color: #F2F2F2;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .box-reviews-stars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .box-stars {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+        }
+
+        .down-side-google {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .review-box-1 {
+            width: 500px;
+            height: 140px;
+            background-color: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .review-box-2 {
+            width: 670px;
+            height: 170px;
+            background-color: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .review-box-3 {
+            width: 500px;
+            height: 140px;
+            background-color: white;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .review-box-left-side {
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .review-box-left-side-2 {
+            width: 170px;
+            height: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-box-1 {
+            border-radius: 1000px;
+            width: 90px;
+            height: 90px;
+            background-color: #2F84FB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-box-2 {
+            border-radius: 1000px;
+            width: 110px;
+            height: 110px;
+            background-color: #F2F2F2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-box-3 {
+            border-radius: 1000px;
+            width: 90px;
+            height: 90px;
+            background-color: #FE340F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-name {
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        .review-box-right-side {
+            width: 360px;
+            height: 140px;
+            display: flex;
+            gap: 5px;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .review-box-right-side-2 {
+            width: 500px;
+            height: 140px;
+            display: flex;
+            gap: 5px;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box-name-star-time {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .user-name-h1 {
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .user-name-h1-2 {
+            font-size: 24px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .box-star-time {
+            display: flex;
+            gap: 7px;
+            align-items: center;
+            justify-content: start;
+        }
+
+        .jaartal {
+            color: #BDBDBD;
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+        .jaartal-2 {
+            color: #BDBDBD;
+            font-size: 15px;
+            font-weight: normal;
+        }
+
+
+        .user-text-h1 {
+            font-size: 14px;
+            font-weight: 500;
+            color: #535353;
+        }
+
+        .user-text-h1-2 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #535353;
+        }
+
+        @media screen and (max-width: 1800px) {}
+    </style>
+</head>
+
+<body>
+    <div id="custom-alert" class="custom-alert">
+        <span id="custom-alert-message"></span>
+        <button id="custom-alert-close" aria-label="Close alert">&times;</button>
+    </div>
+    <div class="container">
+
+        <nav>
+            <div class="navbar-container">
+                <!-- Left: Logo -->
+                <div class="navbar-left">
+                    <a href="#">
+                        <span>ASH</span>
+                    </a>
+                </div>
+
+                <!-- Center: Menu Items (for large screens only) -->
+                <div class="navbar-center">
+                    <ul>
+                        <li><a href="#">Banden</a></li>
+                        <li><a href="#">Onderhoud</a></li>
+                        <li><a href="#">APK</a></li>
+                        <li><a href="#">Airconditioning</a></li>
+                        <li><a href="#">Occasions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right: Get Started + Hamburger -->
+                <div class="navbar-right">
+                    <button class="btn-primary">
+                        <h1 class="btn-h1">Get Started</h1>
+                    </button>
+                    <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                        <svg viewBox="0 0 17 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1h15M1 7h15M1 13h15" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="navbar-mobile-menu hidden" id="navbar-menu">
+                <ul>
+                    <li><a href="#">Banden</a></li>
+                    <li><a href="#">Onderhoud</a></li>
+                    <li><a href="#">APK</a></li>
+                    <li><a href="#">Airconditioning</a></li>
+                    <li><a href="#">Occasions</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+        <div class="text-area">
+            <h1 class="text-h1-contact-title">Wij staan voor je klaar<br>
+                contact ons hier beneden</h1>
+        </div>
+
+        <form id="contact-form" class="contact-form-box">
+            <div class="inner-box-contact-form">
+                <svg class="color-1" width="1741" height="943" viewBox="0 0 1741 943" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_312_32)">
+                        <path
+                            d="M587.325 1049.41L200.5 1099.42L2003 1074.5L2060.5 200.5C2038.32 231.492 1901.42 300.731 1893.5 308C1885.58 315.269 1858 632.5 1743.5 632.5C1704 771.5 1633 718.247 1633 809.5C1633 840.901 1515 827.152 1515 843C1515 898.508 1471.68 863.529 1408.54 865.008L1217 880L1049.5 924.5H862L763.5 976L587.325 1049.41Z"
+                            fill="#154E3A" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_312_32" x="0.5" y="0.5" width="2260" height="1298.92"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_312_32" />
+                        </filter>
+                    </defs>
+                </svg>
+                <svg class="color-2" width="1182" height="796" viewBox="0 0 1182 796" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_312_34)">
+                        <path
+                            d="M491.956 853.446C476.984 846.107 291.08 916.091 200 952H1274L1300 200L1273 311L1182.23 583.209L1190.9 652.07C1172.19 693.241 1141.97 687.407 1127 698.5C1112.03 709.593 1083.02 760.509 1075.87 739.105L790 758.5L719.533 853.446C649.912 856.503 506.928 860.784 491.956 853.446Z"
+                            fill="#48A686" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_312_34" x="0" y="0" width="1500" height="1152"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_312_34" />
+                        </filter>
+                    </defs>
+                </svg>
+                <svg class="color-3" width="657" height="507" viewBox="0 0 657 507" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_f_312_35)">
+                        <path
+                            d="M283.56 481.61L200 528.856V538L935 882.5L689 200L632.454 219.982L652.142 323.617L632.454 421.664L571.1 459.766L472.888 421.664L403.979 481.61H283.56Z"
+                            fill="#88FFE7" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_f_312_35" x="0" y="0" width="1135" height="1082.5"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_312_35" />
+                        </filter>
+                    </defs>
+                </svg>
+
+
+                <div class="container-form">
+                    <div class="left-side">
+                        <div class="naam-box">
+                            <h1 class="contact-form-title">Naam</h1>
+                            <input type="text" name="name" placeholder="Uw Naam" required />
+                        </div>
+                        <div class="naam-box">
+                            <h1 class="contact-form-title">Email adress</h1>
+                            <input type="email" name="email" placeholder="Uw Email" required />
+                        </div>
+                        <div class="area-box">
+                            <h1 class="contact-form-title">Uw bericht</h1>
+                            <textarea name="message" rows="6" placeholder="Laat ons weten waarmee we kunnen helpen..."
+                                required></textarea>
+                        </div>
+
+                        <div class="box-buttons">
+                            <button type="submit" class="button-6">
+                                <div class="svg-wrapper-1">
+                                    <div class="svg-wrapper">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+                                            height="24">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span>Verzenden</span>
+                            </button>
+                        </div>
+
+
+                    </div>
+                    <div class="right-side">
+                        <svg class="color-4" width="746" height="254" viewBox="0 0 746 254" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_f_312_17)">
+                                <path d="M358.921 54L34.5 0H696.5L548.714 49.9592L358.921 54Z" fill="#00C781"
+                                    fill-opacity="0.26" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_f_312_17" x="-165.5" y="-200" width="1062" height="454"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_312_17" />
+                                </filter>
+                            </defs>
+                        </svg>
+                        <svg class="color-5" width="746" height="254" viewBox="0 0 746 254" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_f_312_17)">
+                                <path d="M358.921 54L34.5 0H696.5L548.714 49.9592L358.921 54Z" fill="#00C781"
+                                    fill-opacity="0.26" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_f_312_17" x="-165.5" y="-200" width="1062" height="454"
+                                    filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_312_17" />
+                                </filter>
+                            </defs>
+                        </svg>
+
+                        <div class="top-side-google">
+                            <h1 class="google-title-h1"><span class="blue">G</span><span class="red">o</span><span
+                                    class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span
+                                    class="red">e</span></h1>
+                            <div class="box-reviews-stars">
+                                <h1 class="reviews-text">Reviews</h1>
+                                <div class="box-stars">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 1.25L5.41667 23.125L23.75 9.79167H1.25L19.5833 23.125L12.5 1.25Z"
+                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 1.25L5.41667 23.125L23.75 9.79167H1.25L19.5833 23.125L12.5 1.25Z"
+                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 1.25L5.41667 23.125L23.75 9.79167H1.25L19.5833 23.125L12.5 1.25Z"
+                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 1.25L5.41667 23.125L23.75 9.79167H1.25L19.5833 23.125L12.5 1.25Z"
+                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                    </svg>
+
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.5 1.25L5.41667 23.125L23.75 9.79167H1.25L19.5833 23.125L12.5 1.25Z"
+                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="down-side-google">
+
+                            <div class="review-box-1">
+                                <div class="review-box-left-side">
+                                    <div class="user-box-1">
+                                        <h1 class="user-name">X</h1>
+                                    </div>
+                                </div>
+                                <div class="review-box-right-side">
+                                    <div class="box-name-star-time">
+                                        <h1 class="user-name-h1">XavierKing1956</h1>
+                                        <div class="box-star-time">
+                                            <div class="star-box-main">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </div>
+                                            <h1 class="jaartal">8 jaar geleden</h1>
+                                        </div>
+                                    </div>
+                                    <div class="text-user">
+                                        <h1 class="user-text-h1">Geweldige service !!!
+                                            Al jaren mijn betrouwbare garage . Eenvoudig maar professioneel !!!
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="review-box-2">
+                                <div class="review-box-left-side-2">
+                                    <div class="user-box-2">
+                                        <svg width="89" height="90" viewBox="0 0 89 90" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M88.2 46.0227C88.2 42.8318 87.9136 39.7636 87.3818 36.8182H45V54.2455H69.2182C68.1545 59.85 64.9636 64.5955 60.1773 67.7864V79.1182H74.7818C83.2909 71.2636 88.2 59.7273 88.2 46.0227Z"
+                                                fill="#4285F4" />
+                                            <path
+                                                d="M45 90C57.15 90 67.3364 85.9909 74.7818 79.1182L60.1773 67.7864C56.1682 70.4864 51.0545 72.1227 45 72.1227C33.3 72.1227 23.3591 64.2273 19.8 53.5909H4.82727V65.2091C12.2318 79.8955 27.4091 90 45 90Z"
+                                                fill="#34A853" />
+                                            <path
+                                                d="M19.8 53.55C18.9 50.85 18.3682 47.9864 18.3682 45C18.3682 42.0136 18.9 39.15 19.8 36.45V24.8318H4.82727C1.75909 30.8864 0 37.7182 0 45C0 52.2818 1.75909 59.1136 4.82727 65.1682L16.4864 56.0864L19.8 53.55Z"
+                                                fill="#FBBC05" />
+                                            <path
+                                                d="M45 17.9182C51.6273 17.9182 57.5182 20.2091 62.2227 24.6273L75.1091 11.7409C67.2955 4.45909 57.15 0 45 0C27.4091 0 12.2318 10.1045 4.82727 24.8318L19.8 36.45C23.3591 25.8136 33.3 17.9182 45 17.9182Z"
+                                                fill="#EA4335" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                                <div class="review-box-right-side-2">
+                                    <div class="box-name-star-time">
+                                        <h1 class="user-name-h1-2">mehmet ilhan</h1>
+                                        <div class="box-star-time">
+                                            <div class="star-box-main">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 1L4.33333 18.5L19 7.83333H1L15.6667 18.5L10 1Z"
+                                                        fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                </svg>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 1L4.33333 18.5L19 7.83333H1L15.6667 18.5L10 1Z"
+                                                        fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                </svg>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 1L4.33333 18.5L19 7.83333H1L15.6667 18.5L10 1Z"
+                                                        fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                </svg>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 1L4.33333 18.5L19 7.83333H1L15.6667 18.5L10 1Z"
+                                                        fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                </svg>
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 1L4.33333 18.5L19 7.83333H1L15.6667 18.5L10 1Z"
+                                                        fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                </svg>
+
+
+                                            </div>
+                                            <h1 class="jaartal-2">2 jaar geleden</h1>
+                                        </div>
+                                    </div>
+                                    <div class="text-user">
+                                        <h1 class="user-text-h1-2">Kundige, flexibele en klantvriendelijke auto monteur
+                                            echt een aanrader.
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="review-box-1">
+                                <div class="review-box-left-side">
+                                    <div class="user-box-3">
+                                        <h1 class="user-name">RM</h1>
+                                    </div>
+                                </div>
+                                <div class="review-box-right-side">
+                                    <div class="box-name-star-time">
+                                        <h1 class="user-name-h1">Randy Moederzoon</h1>
+                                        <div class="box-star-time">
+                                            <div class="star-box-main">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_363_103)">
+                                                        <path
+                                                            d="M8.00005 0.799805L3.46672 14.7998L15.2 6.26647H0.800049L12.5334 14.7998L8.00005 0.799805Z"
+                                                            fill="#FABB05" stroke="#FABB05" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_363_103">
+                                                            <rect width="16" height="16" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </div>
+                                            <h1 class="jaartal">5 maanden geleden</h1>
+                                        </div>
+                                    </div>
+                                    <div class="text-user">
+                                        <h1 class="user-text-h1">Top garage en monteur, geen gekken bedragen, soms zelfs
+                                            gratis. Eerlijk
+                                            advies en eerlijke reparaties.
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="footer-main-container">
+            <div class="footer-top-side-container">
+
+                <div class="footer-left-side-container">
+                    <div class="container-holder-stuff">
+                        <h1 class="footer-title">AutoServiceHoute</h1>
+                        <div class="box-info">
+                            <a href="tel:+31612345678">+31 6 12345678</a>
+                            <a href="mailto:info@example.com">AutoServiceHoute@gmail.com</a>
+                            <a href="">Ambachtsring 9-K <br> 1969 NH </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle-side-container">
+                    <div class="container-holder-stuff">
+                        <h1 class="title">Diensten</h1>
+                        <div class="footer-items">
+                            <h1 class="product-names">APK</h1>
+                            <h1 class="product-names">Onderhoud</h1>
+                            <h1 class="product-names">Banden</h1>
+                            <h1 class="product-names">Airconditioning</h1>
+                            <h1 class="product-names">Occasions</h1>
+                            <h1 class="product-names">Contact</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right-side-container">
+                    <div class="container-holder-stuff">
+                        <h1 class="title">Legal</h1>
+                        <div class="footer-items">
+                            <h1 class="product-names">Privacy Policy</h1>
+                            <h1 class="product-names">Terms of Service</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-side-container">
+                <h1 class="footer-copyright-h1-text">© 2025 AutoServiceHoute. Alle rechten voorbehouden.</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("xKnL-OvHIJbJ6pn8s");
+    })();
+
+    const form = document.getElementById('contact-form');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    // Alert elements
+    const alertBox = document.getElementById('custom-alert');
+    const alertMessage = document.getElementById('custom-alert-message');
+    const alertClose = document.getElementById('custom-alert-close');
+
+    function showAlert(message, type = "success") {
+        alertMessage.textContent = message;
+        alertBox.className = `custom-alert show ${type}`;
+        // Auto hide after 4 seconds
+        setTimeout(() => {
+            alertBox.classList.remove('show');
+        }, 4000);
+    }
+
+    alertClose.addEventListener('click', () => {
+        alertBox.classList.remove('show');
+    });
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        submitButton.disabled = true;
+        submitButton.style.cursor = 'not-allowed';
+
+        emailjs.sendForm('service_38razxb', 'template_aplhulr', this)
+            .then(function (response) {
+                showAlert("✅ Bericht succesvol verzonden!", "success");
+                form.reset();
+                submitButton.innerHTML = "✅ Verzonden";
+            }, function (error) {
+                showAlert("❌ Versturen mislukt. Probeer het opnieuw.", "error");
+                console.error(error);
+                submitButton.disabled = false;
+                submitButton.style.cursor = 'pointer';
+            });
+    });
+</script>
+
+<script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('navbar-menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('show');
+    });
+</script>
+
+
+</html>
