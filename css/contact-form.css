@@ -1,5 +1,5 @@
 .contact-form-box {
-    width: 1788px;
+    width: 95%;
     height: 1158px;
     overflow: hidden;
     display: flex;
@@ -10,7 +10,7 @@
 }
 
 .inner-box-contact-form {
-    width: 1784px;
+    width: 99.5%;
     position: relative;
     height: 1154px;
     border-radius: 50px;
@@ -18,11 +18,12 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .left-side {
-    width: 716px;
+    padding-left: 50px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     z-index: 10;
@@ -35,25 +36,23 @@
 }
 
 .right-side {
-    width: 745px;
-    height: 663px;
-    background-color: rgba(0, 0, 0, 0.008);
+    width: 50%;
+    height: fit-content;
+
     z-index: 10;
     border-radius: 40px;
     padding-bottom: 20px;
-    border: 1px solid #18181a50;
+
     position: relative;
     display: flex;
     overflow: hidden;
     align-items: center;
-    backdrop-filter: blur(60px);
-    -webkit-backdrop-filter: blur(60px);
     justify-content: center;
     flex-direction: column;
 }
 
 .naam-box {
-    width: 500px;
+    width: fit-content;
     height: 110px;
     display: flex;
     align-items: start;
@@ -131,6 +130,31 @@ textarea:focus {
     bottom: -10px;
     right: -10px;
 }
+
+.color-6 {
+    position: absolute;
+    z-index: 1;
+    top: -60px;
+    left: -60px;
+    rotate: 180deg;
+}
+
+.color-7 {
+    position: absolute;
+    z-index: 2;
+    top: -70px;
+    left: -70px;
+    rotate: 180deg;
+}
+
+.color-8 {
+    position: absolute;
+    z-index: 3;
+    top: -100px;
+    left: -100px;
+    rotate: 180deg;
+}
+
 
 .color-2 {
     position: absolute;
@@ -232,13 +256,801 @@ button[type="submit"] {
 
 @media (min-width: 320px) {}
 
-@media (min-width: 360px) {}
+@media (min-width: 360px) {
+    .contact-form-box {
+        width: 95%;
+        height: 1358px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background: linear-gradient(-35deg, #222222, #2222221c);
+    }
 
-@media (min-width: 390px) {}
+    .inner-box-contact-form {
+        width: 99.5%;
+        position: relative;
+        height: 1354px;
+        border-radius: 20px;
+        background-color: #0E0C0D;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .left-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        align-items: center;
+        height: fit-content;
+        padding-left: 15px;
+        gap: 10px;
+        justify-content: center;
+        height: 609px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .right-side {
+        width: fit-content;
+        height: fit-content;
+
+        z-index: 10;
+        border-radius: 20px;
+        padding-bottom: 20px;
+        border: none;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .naam-box {
+        width: fit-content;
+        height: 110px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    input {
+        width: 304px;
+        margin: 10px 0;
+        font-size: 18px;
+        height: 63px;
+        border-radius: 10px;
+        color: white;
+        background-color: #18181A;
+        border: 2px solid #222222;
+        padding-left: 20px;
+    }
+
+    input::placeholder {
+        color: #747476;
+        font-size: 16px;
+    }
+
+    .contact-form-title {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    input:focus {
+        color: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        background-color: #e8f0fe1f;
+    }
+
+    textarea {
+        background-color: #18181A;
+        width: 284px;
+        padding: 20px 20px 0 20px;
+        height: 237px;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        margin: 10px 0;
+        border: 2px solid #222222;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    input,
+    textarea {
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .area-box {
+        width: fit-content;
+        height: fit-content;
+
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    textarea:focus {
+        color: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        background-color: #e8f0fe1f;
+    }
+
+    .color-1 {
+        position: absolute;
+        z-index: 1;
+        bottom: -70px;
+        right: -70px;
+    }
+
+    .color-2 {
+        position: absolute;
+        z-index: 2;
+        bottom: -70px;
+        right: -70px;
+    }
+
+    .color-3 {
+        position: absolute;
+        z-index: 3;
+        bottom: -100px;
+        right: -100px;
+    }
+
+    .color-4 {
+        position: absolute;
+        top: -20px;
+        z-index: 1;
+    }
+
+    .color-5 {
+        position: absolute;
+        z-index: 1;
+        top: -60px;
+    }
+
+    .container-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 10;
+        height: 95%;
+
+    }
+
+    .top-side-google {
+        width: 100%;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .google-title-h1 {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    .blue {
+        color: #3074F1;
+    }
+
+    .red {
+        color: #E73124;
+    }
+
+    .yellow {
+        color: #FCB002;
+    }
+
+    .green {
+        color: #249B41;
+    }
+
+    .reviews-text {
+        color: #F2F2F2;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .box-reviews-stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .box-stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .down-side-google {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .review-box-1 {
+        width: 300px;
+        height: 110px;
+        background-color: white;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-box-2 {
+        width: 327px;
+        height: 120px;
+        background-color: white;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-box-3 {
+        width: 350px;
+        height: 130px;
+        background-color: white;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-box-left-side {
+        width: 140px;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-box-left-side-2 {
+        width: 170px;
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-box-1 {
+        border-radius: 1000px;
+        width: 60px;
+        height: 60px;
+        background-color: #2F84FB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-box-2 {
+        border-radius: 1000px;
+        width: 70px;
+        height: 70px;
+        background-color: #F2F2F2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-box-2 svg {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .user-box-3 {
+        border-radius: 1000px;
+        width: 60px;
+        height: 60px;
+        background-color: #FE340F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-name {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .star-box-main svg {
+        width: 14px;
+    }
+
+    .review-box-right-side {
+        width: 360px;
+        height: 140px;
+        display: flex;
+        gap: 0px;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .review-box-right-side-2 {
+        width: 400px;
+        height: 140px;
+        display: flex;
+        gap: 0px;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .box-name-star-time {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .user-name-h1 {
+        font-size: 16px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .user-name-h1-2 {
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .box-star-time {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .jaartal {
+        color: #BDBDBD;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .jaartal-2 {
+        color: #BDBDBD;
+        font-size: 15px;
+        font-weight: normal;
+    }
+
+
+    .user-text-h1 {
+        font-size: 13px;
+        font-weight: 500;
+        width: 95%;
+        color: #535353;
+    }
+
+    .user-text-h1-2 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #535353;
+    }
+}
+@media (min-width: 390px) {
+    .contact-form-box {
+        width: 95%;
+        height: 1358px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background: linear-gradient(-35deg, #222222, #2222221c);
+    }
+
+    .inner-box-contact-form {
+        width: 99.5%;
+        position: relative;
+        height: 1354px;
+        border-radius: 20px;
+        background-color: #0E0C0D;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .left-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        align-items: center;
+        height: fit-content;
+        gap: 10px;
+        justify-content: center;
+        height: 609px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .right-side {
+        width: fit-content;
+        height: fit-content;
+
+        z-index: 10;
+        border-radius: 20px;
+        padding-bottom: 20px;
+        border: none;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .naam-box {
+        width: fit-content;
+        height: 110px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    input {
+        width: 304px;
+        margin: 10px 0;
+        font-size: 18px;
+        height: 63px;
+        border-radius: 10px;
+        color: white;
+        background-color: #18181A;
+        border: 2px solid #222222;
+        padding-left: 20px;
+    }
+
+    input::placeholder {
+        color: #747476;
+        font-size: 16px;
+    }
+
+    .contact-form-title {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    input:focus {
+        color: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        background-color: #e8f0fe1f;
+    }
+
+    textarea {
+        background-color: #18181A;
+        width: 284px;
+        padding: 20px 20px 0 20px;
+        height: 237px;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        margin: 10px 0;
+        border: 2px solid #222222;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    input,
+    textarea {
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .area-box {
+        width: fit-content;
+        height: fit-content;
+
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    textarea:focus {
+        color: rgb(255, 255, 255);
+        border: none;
+        outline: none;
+        background-color: #e8f0fe1f;
+    }
+
+    .color-1 {
+        position: absolute;
+        z-index: 1;
+        bottom: -70px;
+        right: -70px;
+    }
+
+    .color-2 {
+        position: absolute;
+        z-index: 2;
+        bottom: -70px;
+        right: -70px;
+    }
+
+    .color-3 {
+        position: absolute;
+        z-index: 3;
+        bottom: -100px;
+        right: -100px;
+    }
+
+    .color-4 {
+        position: absolute;
+        top: -20px;
+        z-index: 1;
+    }
+
+    .color-5 {
+        position: absolute;
+        z-index: 1;
+        top: -60px;
+    }
+
+    .container-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 10;
+        height: 95%;
+
+    }
+
+    .top-side-google {
+        width: 100%;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .google-title-h1 {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    .blue {
+        color: #3074F1;
+    }
+
+    .red {
+        color: #E73124;
+    }
+
+    .yellow {
+        color: #FCB002;
+    }
+
+    .green {
+        color: #249B41;
+    }
+
+    .reviews-text {
+        color: #F2F2F2;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .box-reviews-stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .box-stars {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .down-side-google {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .review-box-1 {
+        width: 300px;
+        height: 110px;
+        background-color: white;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-box-2 {
+        width: 327px;
+        height: 120px;
+        background-color: white;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-box-3 {
+        width: 350px;
+        height: 130px;
+        background-color: white;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-box-left-side {
+        width: 140px;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .review-box-left-side-2 {
+        width: 170px;
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-box-1 {
+        border-radius: 1000px;
+        width: 60px;
+        height: 60px;
+        background-color: #2F84FB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-box-2 {
+        border-radius: 1000px;
+        width: 70px;
+        height: 70px;
+        background-color: #F2F2F2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-box-2 svg {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .user-box-3 {
+        border-radius: 1000px;
+        width: 60px;
+        height: 60px;
+        background-color: #FE340F;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .user-name {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .star-box-main svg {
+        width: 14px;
+    }
+
+    .review-box-right-side {
+        width: 360px;
+        height: 140px;
+        display: flex;
+        gap: 0px;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .review-box-right-side-2 {
+        width: 400px;
+        height: 140px;
+        display: flex;
+        gap: 0px;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .box-name-star-time {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .user-name-h1 {
+        font-size: 16px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .user-name-h1-2 {
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+    }
+
+    .box-star-time {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .jaartal {
+        color: #BDBDBD;
+        font-size: 13px;
+        font-weight: normal;
+    }
+
+    .jaartal-2 {
+        color: #BDBDBD;
+        font-size: 15px;
+        font-weight: normal;
+    }
+
+
+    .user-text-h1 {
+        font-size: 13px;
+        font-weight: 500;
+        width: 95%;
+        color: #535353;
+    }
+
+    .user-text-h1-2 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #535353;
+    }
+}
 
 @media (min-width: 568px) {
     .contact-form-box {
-        width: 548px;
+        width: 95%;
         height: 1358px;
         overflow: hidden;
         display: flex;
@@ -249,7 +1061,7 @@ button[type="submit"] {
     }
 
     .inner-box-contact-form {
-        width: 544px;
+        width: 99.5%;
         position: relative;
         height: 1354px;
         border-radius: 50px;
@@ -257,26 +1069,32 @@ button[type="submit"] {
         z-index: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .left-side {
-        width: 416px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         z-index: 10;
-        align-items: start;
+        align-items: center;
         height: fit-content;
         gap: 10px;
-        justify-content: space-evenly;
-        height: 609px;
+        justify-content: center;
         background-color: rgba(255, 255, 255, 0);
     }
 
+    .form-holder-div {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     .right-side {
-        width: 485px;
-        height: 563px;
-        background-color: rgba(0, 0, 0, 0.008);
+        width: 50%;
+        height: fit-content;
+
         z-index: 10;
         border-radius: 20px;
         padding-bottom: 20px;
@@ -285,14 +1103,13 @@ button[type="submit"] {
         display: flex;
         overflow: hidden;
         align-items: center;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+
         justify-content: center;
         flex-direction: column;
     }
 
     .naam-box {
-        width: 500px;
+        width: fit-content;
         height: 110px;
         display: flex;
         align-items: start;
@@ -634,7 +1451,7 @@ button[type="submit"] {
 
 @media (min-width: 768px) {
     .contact-form-box {
-        width: 688px;
+        width: 95%;
         height: 1358px;
         overflow: hidden;
         display: flex;
@@ -645,7 +1462,7 @@ button[type="submit"] {
     }
 
     .inner-box-contact-form {
-        width: 684px;
+        width: 99.5%;
         position: relative;
         height: 1354px;
         border-radius: 50px;
@@ -653,11 +1470,11 @@ button[type="submit"] {
         z-index: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .left-side {
-        width: 416px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         z-index: 10;
@@ -670,25 +1487,24 @@ button[type="submit"] {
     }
 
     .right-side {
-        width: 605px;
-        height: 563px;
-        background-color: rgba(0, 0, 0, 0.008);
+        width: 50%;
+        height: fit-content;
+
         z-index: 10;
         border-radius: 20px;
         padding-bottom: 20px;
-        border: 1px solid #18181a50;
+
         position: relative;
         display: flex;
         overflow: hidden;
         align-items: center;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+
         justify-content: center;
         flex-direction: column;
     }
 
     .naam-box {
-        width: 500px;
+        width: fit-content;
         height: 110px;
         display: flex;
         align-items: start;
@@ -1030,7 +1846,7 @@ button[type="submit"] {
 
 @media (min-width: 1024px) {
     .contact-form-box {
-        width: 988px;
+        width: 95%;
         height: 758px;
         overflow: hidden;
         display: flex;
@@ -1041,7 +1857,7 @@ button[type="submit"] {
     }
 
     .inner-box-contact-form {
-        width: 984px;
+        width: 99.5%;
         position: relative;
         height: 754px;
         border-radius: 50px;
@@ -1049,11 +1865,12 @@ button[type="submit"] {
         z-index: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .left-side {
-        width: 416px;
+        padding-left: 50px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         z-index: 10;
@@ -1066,25 +1883,24 @@ button[type="submit"] {
     }
 
     .right-side {
-        width: 445px;
-        height: 563px;
-        background-color: rgba(0, 0, 0, 0.008);
+        width: 50%;
+        height: fit-content;
+
         z-index: 10;
         border-radius: 20px;
         padding-bottom: 20px;
-        border: 1px solid #18181a50;
+
         position: relative;
         display: flex;
         overflow: hidden;
         align-items: center;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+
         justify-content: center;
         flex-direction: column;
     }
 
     .naam-box {
-        width: 500px;
+        width: fit-content;
         height: 110px;
         display: flex;
         align-items: start;
@@ -1425,7 +2241,7 @@ button[type="submit"] {
 
 @media (min-width: 1280px) {
     .contact-form-box {
-        width: 1188px;
+        width: 95%;
         height: 1158px;
         overflow: hidden;
         display: flex;
@@ -1436,7 +2252,7 @@ button[type="submit"] {
     }
 
     .inner-box-contact-form {
-        width: 1184px;
+        width: 99.5%;
         position: relative;
         height: 1154px;
         border-radius: 50px;
@@ -1444,11 +2260,12 @@ button[type="submit"] {
         z-index: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .left-side {
-        width: 516px;
+        padding-left: 50px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         z-index: 10;
@@ -1461,25 +2278,24 @@ button[type="submit"] {
     }
 
     .right-side {
-        width: 545px;
-        height: 663px;
-        background-color: rgba(0, 0, 0, 0.008);
+        width: 50%;
+        height: fit-content;
+
         z-index: 10;
         border-radius: 40px;
         padding-bottom: 20px;
-        border: 1px solid #18181a50;
+
         position: relative;
         display: flex;
         overflow: hidden;
         align-items: center;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+
         justify-content: center;
         flex-direction: column;
     }
 
     .naam-box {
-        width: 500px;
+        width: fit-content;
         height: 110px;
         display: flex;
         align-items: start;
@@ -1809,7 +2625,7 @@ button[type="submit"] {
 
 @media (min-width: 1440px) {
     .contact-form-box {
-        width: 1388px;
+        width: 95%;
         height: 1158px;
         overflow: hidden;
         display: flex;
@@ -1820,7 +2636,7 @@ button[type="submit"] {
     }
 
     .inner-box-contact-form {
-        width: 1384px;
+        width: 99.5%;
         position: relative;
         height: 1154px;
         border-radius: 50px;
@@ -1828,11 +2644,12 @@ button[type="submit"] {
         z-index: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .left-side {
-        width: 616px;
+        padding-left: 50px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         z-index: 10;
@@ -1845,25 +2662,24 @@ button[type="submit"] {
     }
 
     .right-side {
-        width: 645px;
-        height: 663px;
-        background-color: rgba(0, 0, 0, 0.008);
+        width: 50%;
+        height: fit-content;
+
         z-index: 10;
         border-radius: 40px;
         padding-bottom: 20px;
-        border: 1px solid #18181a50;
+
         position: relative;
         display: flex;
         overflow: hidden;
         align-items: center;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+
         justify-content: center;
         flex-direction: column;
     }
 
     .naam-box {
-        width: 500px;
+        width: fit-content;
         height: 110px;
         display: flex;
         align-items: start;
@@ -2193,7 +3009,7 @@ button[type="submit"] {
 
 @media (min-width: 1640px) {
     .contact-form-box {
-        width: 1588px;
+        width: 95%;
         height: 1158px;
         overflow: hidden;
         display: flex;
@@ -2204,7 +3020,7 @@ button[type="submit"] {
     }
 
     .inner-box-contact-form {
-        width: 1584px;
+        width: 99.5%;
         position: relative;
         height: 1154px;
         border-radius: 50px;
@@ -2212,11 +3028,12 @@ button[type="submit"] {
         z-index: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .left-side {
-        width: 716px;
+        padding-left: 50px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         z-index: 10;
@@ -2229,25 +3046,24 @@ button[type="submit"] {
     }
 
     .right-side {
-        width: 745px;
-        height: 663px;
-        background-color: rgba(0, 0, 0, 0.008);
+        width: 50%;
+        height: fit-content;
+
         z-index: 10;
         border-radius: 40px;
         padding-bottom: 20px;
-        border: 1px solid #18181a50;
+
         position: relative;
         display: flex;
         overflow: hidden;
         align-items: center;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+
         justify-content: center;
         flex-direction: column;
     }
 
     .naam-box {
-        width: 500px;
+        width: fit-content;
         height: 110px;
         display: flex;
         align-items: start;
@@ -2365,7 +3181,7 @@ button[type="submit"] {
 
 @media (min-width: 1800px) {
     .contact-form-box {
-        width: 1688px;
+        width: 95%;
         height: 1158px;
         overflow: hidden;
         display: flex;
@@ -2376,7 +3192,7 @@ button[type="submit"] {
     }
 
     .inner-box-contact-form {
-        width: 1684px;
+        width: 99.5%;
         position: relative;
         height: 1154px;
         border-radius: 50px;
@@ -2384,11 +3200,12 @@ button[type="submit"] {
         z-index: 1;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
     }
 
     .left-side {
-        width: 716px;
+        padding-left: 50px;
+        width: 50%;
         display: flex;
         flex-direction: column;
         z-index: 10;
@@ -2401,25 +3218,24 @@ button[type="submit"] {
     }
 
     .right-side {
-        width: 745px;
-        height: 663px;
-        background-color: rgba(0, 0, 0, 0.008);
+        width: 50%;
+        height: fit-content;
+
         z-index: 10;
         border-radius: 40px;
         padding-bottom: 20px;
-        border: 1px solid #18181a50;
+
         position: relative;
         display: flex;
         overflow: hidden;
         align-items: center;
-        backdrop-filter: blur(60px);
-        -webkit-backdrop-filter: blur(60px);
+
         justify-content: center;
         flex-direction: column;
     }
 
     .naam-box {
-        width: 500px;
+        width: fit-content;
         height: 110px;
         display: flex;
         align-items: start;
